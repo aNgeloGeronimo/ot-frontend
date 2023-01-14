@@ -1,13 +1,400 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Kings&family=Kirang+Haerang&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.link{
+  text-decoration: none;
+  color: #FFF;  
 }
+
+body{
+  background: linear-gradient(#101010, #fff);
+  background-repeat: no-repeat;
+  font-family: 'Karla', sans-serif;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  min-width: 80vw;
+}
+
+.btn{
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #EB8E02;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.btn:hover{
+  transform: scale(0.9);
+}
+
+.navbar{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.navbar .container{
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.navbar .logo{
+  font-size: 1.8rem;
+}
+
+.navbar .logo h1:nth-child(1){
+  font-family: 'Kings', cursive;
+  color: #FFFFFF;
+}
+
+.navbar .logo h1:nth-child(2){
+  font-family: 'Kirang Haerang', cursive;
+  color: #EB8E02;
+}
+
+.navbar .navigation{
+  justify-self: center;
+  padding-right: 20px;
+}
+
+.navbar .link{
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.navbar .btn:nth-child(1){
+  font-size: 1.5rem;
+  color: #eee;
+  background: none;
+}
+
+.navbar .btn:nth-child(2){
+  font-size: 1.5rem;
+  background-color: rgb(175, 224, 39);
+  padding-left: 2vmin;
+}
+
+.navbar .message{
+  align-items: center;
+  font-size: 1.5rem;
+  color:rgb(175, 224, 39);
+}
+
+.navbar .message .btn{
+  color: #cccccc;
+  font-size: .8rem;
+  background: none;
+  border: none;
+}
+
+.navbar .message h5{
+  padding-right: 20px;
+  border-right: solid 2px #aaa;
+}
+
+.header{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header .container{
+  display: grid;
+  padding: 0 30vmin;
+  grid-template-columns: 5fr 5fr;
+  column-gap: 20vmin;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header h1{
+  padding-top: -20vmin;
+  color: #333;
+  justify-self: flex-start;
+  text-align: justify;
+  width: 30vmin;
+  font-size: 4rem;
+  padding-bottom: 20px;
+}
+
+.header .text-highlight{
+  color: rgba(241, 241, 40, 0.892);
+}
+
+.header .head-text{
+  padding-bottom: 45vmin;
+}
+
+.header .link{
+  font-size: 2.5rem;
+  color: #000;
+}
+
+.header .link:hover{
+  transform: scale(0.5);
+}
+
+.header img{
+  height: 150vmin;
+  object-fit: cover;
+  padding: 10vmin 0;
+  object-position: center;
+}
+
+.login-container{
+  height: 87vmin;
+}
+
+.login-form{
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.login-form .name{
+  flex-direction: column;
+}
+
+.form-control {
+  margin: 0 20px;
+}
+
+.form-control label {
+  color: #000;
+  padding-top: 5px;
+  display: block;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.form-control input {
+  width: 70vmin;
+  height: 5vmin;
+  border: none;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 17px;
+}
+
+.form-control input:active {
+  border-style: none;
+}
+
+.login-form .signup{
+  width: 15vmin;
+  height: 5vmin;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  padding: 2px;
+  margin: 2px;
+}
+
+.login-form .signup:hover{
+  background: #333;
+  color: #f6dc39;
+}
+
+.store{
+  height: auto;
+  padding-top: 10vmin;
+  padding-bottom: 10vmin;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 3vmin;
+}
+
+.store .categories{
+  padding-left: 3vmin;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.store .head-accent{
+  align-self: flex-start;
+  height: 10vmin;
+}
+
+.store button{
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+}
+
+.store button:hover{
+  text-decoration: underline;
+}
+
+.store button:active{
+  transform: scale(.9);
+}
+
+.store .products{
+  padding-right: 3vmin;
+  height: 100vh;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2vmin;
+}
+
+.store .item{
+  background: #aaa;
+  width: 40vmin;
+  height: 40vmin;
+  border: solid .5px #888;
+}
+
+.store .item:hover{
+  border: #000 solid 2px;
+}
+
+.store .item:active{
+  transform: scale(0.9);
+}
+
+.store .item p{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.store .item h5{
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.store img{
+  width: 100%;
+  height: 30vmin;
+  object-fit: cover;
+  object-position: top;
+}
+
+.highlight{
+  padding-top: 10vmin;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.highlight img{
+  justify-self: flex-end;
+  height: 70vmin;
+
+}
+
+.highlight .details{
+  padding: 0 20vmin 0 10vmin;
+}
+
+.highlight .details p, .highlight .details h3{
+  padding-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.highlight .details h1{
+  font-size: 3rem;
+}
+
+.highlight .details p{
+  font-size: 1.5rem;
+}
+
+.highlight .details h3{
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: #000;
+  padding-bottom: 10px;
+}
+
+.highlight .details button{
+  font-size: 1.5rem;
+  border: none;
+  width: 10vmin;
+  height: 5vmin;
+  background: #000;
+  color: #fff;
+}
+
+.highlight .details button:hover{
+  background: #333;
+  transform: scale(0.98);
+}
+
+.highlight .details button:active{
+  background: #555;
+  transform: scale(0.9);
+}
+
+.about-us{
+  padding-top: 10vmin;
+  flex-wrap: wrap;
+  gap: 10vmin 2vmin;
+  height: 1600px;
+  width: 100%;
+}
+
+.about-us .us-card{
+  padding: 2vmin;
+  height: 80vmin;
+  width: 60vmin;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about-us img{
+  padding: 4px;
+  border-radius: 500px;
+  height: 40vmin;
+  width: 40vmin;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-us .info-container{
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.about-us .info h1{
+  padding-top: 2vmin;
+  font-size: 2.5rem;
+}
+
+.about-us .info ul{
+  padding-top: 1vmin;
+}
+
+.about-us .info h3{
+  font-size: 1.8rem;
+}
+
+.about-us .info p{
+  padding-top: 1vmin;
+  font-weight: bold;
+  color: #222;
+  font-size: 1.5rem;
+}
+
